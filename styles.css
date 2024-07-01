@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1 0 calc(100% - 85px); /* Adjusted to fit within the container */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease; /* Added transition for border color */
+}
+
+input[type="text"]:focus {
+    border-color: #218838; /* Changed border color on focus */
+}
+
+select, #add-task-button {
+    padding: 15px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for background and text color */
+}
+
+#add-task-button {
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+
+#add-task-button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+li .delete {
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+li .delete:hover {
+    color: #c0392b;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+li .edit, li .complete {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+li .edit:hover, li .complete:hover {
+    color: #007bff;
+}
+
+.low {
+    border-left: 5px solid green;
+}
+
+.medium {
+    border-left: 5px solid orange;
+
+}
+
+.high {
+    border-left: 5px solid red;
+}
